@@ -565,6 +565,50 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <div id="viewCount"></div>
+
+
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>Website View Count</title>
+    <script>
+        // Function to update the view count
+        function updateViewCount() {
+            // Get the current view count from local storage
+            let viewCount = localStorage.getItem("viewCount");
+
+            // If view count is null or undefined, initialize it to 1
+            if (!viewCount) {
+                viewCount = 1;
+            } else {
+                // Increment the view count
+                viewCount++;
+            }
+
+            // Save the updated view count to local storage
+            localStorage.setItem("viewCount", viewCount);
+
+            // Update the view count in the HTML element
+            document.getElementById("viewCount").textContent = `Total Views: ${viewCount}`;
+        }
+
+        // Call the updateViewCount function on page load
+        window.addEventListener("load", updateViewCount);
+    </script>
+</head>
+<body>
+    <div id="viewCount"></div>
+</body>
+
+
+
+
+
+
+</html>
+
 </body>
 
 </html>
