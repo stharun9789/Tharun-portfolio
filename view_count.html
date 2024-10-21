@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Website View Count</title>
     <style>
         #viewCount {
             font-weight: bold;
-            margin-right: 10px; /* Adjust the margin as needed */
+            margin-right: 10px;
+            font-size: 18px; /* Adjust the font size as needed */
         }
     </style>
     <script>
@@ -26,7 +26,7 @@
             localStorage.setItem("viewCount", viewCount);
 
             // Update the view count in the HTML element
-            document.getElementById("viewCount").textContent = `Total Views: ${viewCount}`;
+            document.getElementById("viewCount").textContent = `Website Views: ${viewCount}`;
         }
 
         // Call the updateViewCount function on page load

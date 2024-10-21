@@ -534,6 +534,50 @@
                     <div class="d-flex pt-2">
                         <a class="btn btn-square btn-primary me-2" href="https://www.linkedin.com/in/tharun-srinivasan-240993285"><i class="fab fa-linkedin-in"></i></a>
                     </div>
+                      
+                    <!DOCTYPE html>
+                    <html>
+                    <head>
+                        <style>
+                            #viewCount {
+                                font-weight: bold;
+                                margin-right: 10px;
+                                font-size: 18px; /* Adjust the font size as needed */
+                            }
+                        </style>
+                        <script>
+                            // Function to update the view count
+                            function updateViewCount() {
+                                // Get the current view count from local storage
+                                let viewCount = localStorage.getItem("viewCount");
+                    
+                                // If view count is null or undefined, initialize it to 1
+                                if (!viewCount) {
+                                    viewCount = 1;
+                                } else {
+                                    // Increment the view count
+                                    viewCount++;
+                                }
+                    
+                                // Save the updated view count to local storage
+                                localStorage.setItem("viewCount", viewCount);
+                    
+                                // Update the view count in the HTML element
+                                document.getElementById("viewCount").textContent = `Website Views: ${viewCount}`;
+                            }
+                    
+                            // Call the updateViewCount function on page load
+                            window.addEventListener("load", updateViewCount);
+                        </script>
+                    </head>
+                    <body>
+                        <div id="footer">
+                            <div id="viewCount"></div>
+                        </div>
+                    </body>
+                    </html>
+
+
                 </div>
                 <div class="col-lg-7 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <p class="mb-4"></a></p>
@@ -546,47 +590,7 @@
         </div>
     </div>
     
-    
-    <!DOCTYPE html>
-    <html>
-    <head>
-        <style>
-            #viewCount {
-                font-weight: bold;
-                margin-right: 10px; /* Adjust the margin as needed */
-            }
-        </style>
-        <script>
-            // Function to update the view count
-            function updateViewCount() {
-                // Get the current view count from local storage
-                let viewCount = localStorage.getItem("viewCount");
-    
-                // If view count is null or undefined, initialize it to 1
-                if (!viewCount) {
-                    viewCount = 1;
-                } else {
-                    // Increment the view count
-                    viewCount++;
-                }
-    
-                // Save the updated view count to local storage
-                localStorage.setItem("viewCount", viewCount);
-    
-                // Update the view count in the HTML element
-                document.getElementById("viewCount").textContent = `Total Views: ${viewCount}`;
-            }
-    
-            // Call the updateViewCount function on page load
-            window.addEventListener("load", updateViewCount);
-        </script>
-    </head>
-    <body>
-        <div id="footer">
-            <div id="viewCount"></div>
-        </div>
-    </body>
-    </html>
+  
     <!-- Contact End -->
      
 
